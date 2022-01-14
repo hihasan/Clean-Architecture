@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="items"
+            type="com.hihasan.recyclerviewwithdiffutil.ItemData" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18sp"
+            app:cardElevation="15sp"
+            app:cardCornerRadius="10sp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sl_no_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{items.sl_no}"
+                    android:textSize="21sp"
+                    android:layout_margin="2sp"
+                    android:textColor="@android:color/black"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sl_no_tv"
+                    android:text="@{items.name}"
+                    android:textSize="16sp"
+                    android:layout_margin="2sp"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{items.phone}"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="2sp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/holo_orange_dark"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_title"
+            android:layout_marginEnd="5sp"
+            android:gravity="center"
+            app:background="@null"
+            app:iconifiedByDefault="true"
+            android:layout_alignParentRight="true"
+            app:queryHint="Search"
+            app:searchIcon="@android:drawable/ic_search_category_default" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/item_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search"
+            android:layout_margin="12sp"/>
+
+    </RelativeLayout>
+
+</layout>
